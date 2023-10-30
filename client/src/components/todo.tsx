@@ -59,7 +59,8 @@ export const Todo: FC<Props> = ({ title, completed, id }) => {
 
   return (
     <div className="flex items-center gap-2">
-      <input type="checkbox" checked={completed} onChange={onChange} /> {title}
+      <input type="checkbox" checked={completed} onChange={onChange} /> 
+      <p className={`${ completed ? 'line-through text-slate-400' : ''}`}>{title}</p>
       <button onClick={onDelete} className="text-rose-500">
         [x]
       </button>
