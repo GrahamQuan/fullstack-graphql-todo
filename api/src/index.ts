@@ -25,7 +25,7 @@ const server = new ApolloServer({
 
 await server.start()
 app.use(
-  '/graphql',
+  '/api/graphql',
   cors<cors.CorsRequest>(),
   express.json(),
   expressMiddleware(server)
