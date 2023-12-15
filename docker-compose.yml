@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      target: base
+    # this will copy local files to docker
+    # volumes:
+    #   - ./client:/usr/app/client
+    environment:
+      VITE_GRAPHQL_URI: http://localhost:3000
+    expose:
+      - '8080'
+    ports:
+      - "8080:8080"
+    command: npm run dev
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+      target: base
+    # volumes:
+    #   - ./api:/usr/app/api
+    environment:
+      DATABASE_URL: mongodb+srv://grahamquan24:ioruyBPGAyc08hsv@cluster0.for8jqn.mongodb.net/graphql-todo?retryWrites=true&w=majority
+    container_name: api
+    expose:
+      - '3000'
+    ports:
+      - "3000:3000"
+    command: node --watch --loader=tsx src/index.ts

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      target: production
+    environment:
+      VITE_GRAPHQL_URI: http://localhost:3000
+    container_name: client
+    command: npm run preview
+
+  api:
+    build:
+      target: production
+    environment:
+      DATABASE_URL: mongodb+srv://grahamquan24:ioruyBPGAyc08hsv@cluster0.for8jqn.mongodb.net/graphql-todo?retryWrites=true&w=majority
+    container_name: api
+    expose:
+      - '3000'
+    ports:
+      - "3000:3000"
+    command: npm run dev

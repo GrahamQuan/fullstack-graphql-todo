@@ -33,7 +33,7 @@ function App() {
     <main className="p-4 w-full h-screen flex flex-col items-center">
       <h1 className="text-2xl font-bold mb-2">Todo List</h1>
       <p className="mb-1">
-        GraphQL + Typescript + React + Node + Prisma + MongoDB
+        GraphQL + Typescript + Vite + React + Node + Prisma + MongoDB
       </p>
       <AddTodo />
       <div className="mt-1">

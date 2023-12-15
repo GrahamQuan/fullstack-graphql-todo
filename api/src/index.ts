@@ -31,6 +31,10 @@ app.use(
   expressMiddleware(server)
 )
 
+app.get('/api/status', (req, res) => {
+  return res.send('ok')
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`)
 })
