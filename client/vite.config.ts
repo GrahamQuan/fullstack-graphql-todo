@@ -7,9 +7,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    // define: {
-    //   VITE_VERCEL_ENV: process.env.VITE_VERCEL_ENV,
-    // },
+    define: {
+      VITE_GRAPHQL_URI: process.env.VITE_GRAPHQL_URI,
+    },
     preview: {
       host: true,
       strictPort: true,

@@ -1,9 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 
-const uri = import.meta.env.VITE_GRAPHQL_URI
-
 const client = new ApolloClient({
-  uri: `${uri}/api/graphql`,
+  uri: `${import.meta.env.VITE_GRAPHQL_URI}/api/graphql`,
   cache: new InMemoryCache(),
 })
 
