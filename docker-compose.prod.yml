@@ -13,10 +13,10 @@ services:
     build:
       target: production
     environment:
-      DATABASE_URL: mongodb+srv://grahamquan24:ioruyBPGAyc08hsv@cluster0.for8jqn.mongodb.net/graphql-todo?retryWrites=true&w=majority
+      DATABASE_URL: mongodb+srv://grahamquan24:ioruyBPGAyc08hsv@cluster0.for8jqn.mongodb.net/graphql-todo?retryWrites=true&w=majority&authSource=admin
     container_name: api
     expose:
       - '3000'
     ports:
       - "3000:3000"
-    command: npm run dev
+    command: npm run start

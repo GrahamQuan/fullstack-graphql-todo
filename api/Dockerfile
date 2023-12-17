@@ -9,13 +9,14 @@ RUN npm i
 COPY . .
 
 RUN npx prisma generate
+RUN npx prisma db push
 
 EXPOSE 3000
 
 # CMD ["npm", "run", "dev"]
 
-# FROM base AS production
+FROM base AS production
 
 # ENV
 
-# RUN npm run build
+RUN npm run build

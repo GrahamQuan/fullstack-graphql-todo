@@ -25,7 +25,7 @@ services:
     # volumes:
     #   - ./api:/usr/app/api
     environment:
-      DATABASE_URL: mongodb+srv://grahamquan24:ioruyBPGAyc08hsv@cluster0.for8jqn.mongodb.net/graphql-todo?retryWrites=true&w=majority
+      DATABASE_URL: mongodb+srv://grahamquan24:ioruyBPGAyc08hsv@cluster0.for8jqn.mongodb.net/graphql-todo?retryWrites=true&w=majority&authSource=admin
     container_name: api
     expose:
       - '3000'

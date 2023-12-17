@@ -7,7 +7,7 @@ import { readFileSync } from 'fs'
 import cors from 'cors'
 import express from 'express'
 
-import resolvers from './graphql/resolvers'
+import resolvers from './graphql/resolvers.js'
 
 const PORT = Number(process.env.PORT || '3000')
 const app = express()
