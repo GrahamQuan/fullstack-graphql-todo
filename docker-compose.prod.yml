@@ -20,7 +20,7 @@ services:
       target: production
     environment:
       NODE_ENV: production
-      DATABASE_URL: mongodb+srv://grahamquan24:ioruyBPGAyc08hsv@cluster0.for8jqn.mongodb.net/graphql-todo?retryWrites=true&w=majority
+      DATABASE_URL: 
       PORT: 3000
     container_name: api
     expose:
