@@ -11,6 +11,7 @@ services:
     #   - ./client:/usr/app/client
     environment:
       VITE_GRAPHQL_URI: http://localhost:3000
+      VITE_PORT: 8080
     expose:
       - '8080'
     ports:
@@ -26,6 +27,7 @@ services:
     #   - ./api:/usr/app/api
     environment:
       DATABASE_URL: mongodb+srv://grahamquan24:ioruyBPGAyc08hsv@cluster0.for8jqn.mongodb.net/graphql-todo?retryWrites=true&w=majority&authSource=admin
+      PORT: 3000
     container_name: api
     expose:
       - '3000'
